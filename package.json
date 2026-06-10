@@ -1,0 +1,29 @@
+{
+  "name": "guide-map-handdrawn-workflow",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic hand-drawn map rendering workflow for pixel-aligned native map overlays.",
+  "scripts": {
+    "render": "node scripts/render-handdrawn-map.js --config config/viewport.example.json --data data/example-map.geojson --style styles/handdrawn.example.json",
+    "validate": "node scripts/validate-overlay.js --manifest output/example-overlay.json --svg output/example-handdrawn.svg",
+    "fetch:xixi": "node scripts/fetch-osm-geojson.js --config config/xixi-wetland.viewport.json --out data/xixi-wetland.osm.geojson",
+    "render:xixi": "node scripts/render-handdrawn-map.js --config config/xixi-wetland.viewport.json --data data/xixi-wetland.osm.geojson --style styles/handdrawn.example.json",
+    "validate:xixi": "node scripts/validate-overlay.js --manifest output/xixi-wetland-overlay.json --svg output/xixi-wetland-handdrawn.svg",
+    "fetch:baima": "node scripts/fetch-osm-geojson.js --config config/baima-lake.viewport.json --out data/baima-lake.osm.geojson",
+    "render:baima": "node scripts/render-handdrawn-map.js --config config/baima-lake.viewport.json --data data/baima-lake.osm.geojson --style styles/jiangnan-guide.json",
+    "validate:baima": "node scripts/validate-overlay.js --manifest output/baima-lake-overlay.json --svg output/baima-lake-jiangnan.svg",
+    "render:xixi:watercolor": "node scripts/render-handdrawn-map.js --config config/xixi-wetland.viewport.json --data data/xixi-wetland.osm.geojson --style styles/watercolor.json --out output/styles/xixi-watercolor.svg --manifest output/styles/xixi-watercolor-overlay.json",
+    "render:xixi:ink": "node scripts/render-handdrawn-map.js --config config/xixi-wetland.viewport.json --data data/xixi-wetland.osm.geojson --style styles/ink.json --out output/styles/xixi-ink.svg --manifest output/styles/xixi-ink-overlay.json",
+    "render:xixi:storybook": "node scripts/render-handdrawn-map.js --config config/xixi-wetland.viewport.json --data data/xixi-wetland.osm.geojson --style styles/storybook.json --out output/styles/xixi-storybook.svg --manifest output/styles/xixi-storybook-overlay.json",
+    "render:xixi:path-emphasis": "node scripts/render-handdrawn-map.js --config config/xixi-wetland.viewport.json --data data/xixi-wetland.osm.geojson --style styles/path-emphasis.json --out output/styles/xixi-path-emphasis.svg --manifest output/styles/xixi-path-emphasis-overlay.json",
+    "render:xixi:jiangnan": "node scripts/render-handdrawn-map.js --config config/xixi-wetland.viewport.json --data data/xixi-wetland.osm.geojson --style styles/jiangnan-guide.json --out output/styles/xixi-jiangnan-guide.svg --manifest output/styles/xixi-jiangnan-guide-overlay.json",
+    "render:xixi:attractions": "node scripts/render-attractions-overlay.js --manifest output/styles/xixi-jiangnan-guide-overlay.json --attractions data/attractions/xixi-attractions.json --out output/attractions/xixi-attractions-overlay.svg --overlayManifest output/attractions/xixi-attractions-overlay.json",
+    "compose:xixi:attractions": "node scripts/compose-svg-overlays.js --base output/styles/xixi-jiangnan-guide.svg --overlay output/attractions/xixi-attractions-overlay.svg --out output/attractions/xixi-jiangnan-with-attractions.svg",
+    "render:xixi:styles": "npm run render:xixi:watercolor && npm run render:xixi:ink && npm run render:xixi:storybook && npm run render:xixi:path-emphasis && npm run render:xixi:jiangnan",
+    "validate:xixi:styles": "node scripts/validate-overlay.js --manifest output/styles/xixi-watercolor-overlay.json --svg output/styles/xixi-watercolor.svg && node scripts/validate-overlay.js --manifest output/styles/xixi-ink-overlay.json --svg output/styles/xixi-ink.svg && node scripts/validate-overlay.js --manifest output/styles/xixi-storybook-overlay.json --svg output/styles/xixi-storybook.svg && node scripts/validate-overlay.js --manifest output/styles/xixi-path-emphasis-overlay.json --svg output/styles/xixi-path-emphasis.svg && node scripts/validate-overlay.js --manifest output/styles/xixi-jiangnan-guide-overlay.json --svg output/styles/xixi-jiangnan-guide.svg"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

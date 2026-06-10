@@ -1,0 +1,47 @@
+{
+  "name": "xixi-wetland",
+  "viewport": {
+    "width": 1600,
+    "height": 1000,
+    "devicePixelRatio": 1,
+    "bounds": {
+      "southwest": {
+        "longitude": 120.043168,
+        "latitude": 30.246442
+      },
+      "northeast": {
+        "longitude": 120.091978,
+        "latitude": 30.281192
+      }
+    },
+    "center": [120.067573, 30.263817],
+    "zoom": 14.12,
+    "tileSize": 512,
+    "coordinateSystem": "GCJ02",
+    "bearing": 0,
+    "pitch": 0
+  },
+  "data": {
+    "coordinateSystem": "WGS84"
+  },
+  "render": {
+    "seed": "xixi-wetland-v1",
+    "geometryMode": "exact-with-sketch",
+    "showDebugFrame": false
+  },
+  "osm": {
+    "source": "overpass",
+    "timeoutSeconds": 90,
+    "filters": {
+      "includeRoads": true,
+      "includeWater": true,
+      "includeGreen": true,
+      "includeBuildings": true,
+      "includePoi": false
+    }
+  },
+  "output": {
+    "svg": "output/xixi-wetland-handdrawn.svg",
+    "manifest": "output/xixi-wetland-overlay.json"
+  }
+}

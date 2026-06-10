@@ -1,0 +1,26 @@
+{
+  "name": "example-park",
+  "viewport": {
+    "width": 1200,
+    "height": 800,
+    "devicePixelRatio": 1,
+    "center": [116.397389, 39.908722],
+    "zoom": 16,
+    "tileSize": 512,
+    "coordinateSystem": "GCJ02",
+    "bearing": 0,
+    "pitch": 0
+  },
+  "data": {
+    "coordinateSystem": "GCJ02"
+  },
+  "render": {
+    "seed": "example-park-v1",
+    "geometryMode": "exact-with-sketch",
+    "showDebugFrame": false
+  },
+  "output": {
+    "svg": "output/example-handdrawn.svg",
+    "manifest": "output/example-overlay.json"
+  }
+}

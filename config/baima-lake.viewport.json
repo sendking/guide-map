@@ -1,0 +1,47 @@
+{
+  "name": "baima-lake",
+  "viewport": {
+    "width": 1600,
+    "height": 1000,
+    "devicePixelRatio": 1,
+    "bounds": {
+      "southwest": {
+        "longitude": 120.199731,
+        "latitude": 30.157279
+      },
+      "northeast": {
+        "longitude": 120.213047,
+        "latitude": 30.164914
+      }
+    },
+    "center": [120.206389, 30.1610965],
+    "zoom": 16,
+    "tileSize": 512,
+    "coordinateSystem": "GCJ02",
+    "bearing": 0,
+    "pitch": 0
+  },
+  "data": {
+    "coordinateSystem": "WGS84"
+  },
+  "render": {
+    "seed": "baima-lake-v1",
+    "geometryMode": "exact-with-sketch",
+    "showDebugFrame": false
+  },
+  "osm": {
+    "source": "overpass",
+    "timeoutSeconds": 90,
+    "filters": {
+      "includeRoads": true,
+      "includeWater": true,
+      "includeGreen": true,
+      "includeBuildings": true,
+      "includePoi": false
+    }
+  },
+  "output": {
+    "svg": "output/baima-lake-jiangnan.svg",
+    "manifest": "output/baima-lake-overlay.json"
+  }
+}

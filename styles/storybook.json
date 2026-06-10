@@ -1,0 +1,113 @@
+{
+  "background": "#fff1c8",
+  "paper": {
+    "enabled": true,
+    "opacity": 0.12
+  },
+  "defaultLayer": {
+    "fill": "none",
+    "stroke": "#6d4d34",
+    "strokeWidth": 1.5,
+    "opacity": 1
+  },
+  "layers": [
+    {
+      "id": "water",
+      "zIndex": 10,
+      "match": {
+        "kind": ["water", "river", "lake"]
+      },
+      "geometry": ["Polygon", "MultiPolygon", "LineString", "MultiLineString"],
+      "fill": "#86cde4",
+      "stroke": "#3386a5",
+      "strokeWidth": 2.2,
+      "texture": "waves",
+      "sketch": {
+        "enabled": true,
+        "copies": 2,
+        "jitter": 0.65,
+        "opacity": 0.3
+      }
+    },
+    {
+      "id": "park",
+      "zIndex": 20,
+      "match": {
+        "kind": ["park", "green", "forest", "garden"]
+      },
+      "geometry": ["Polygon", "MultiPolygon"],
+      "fill": "#a9df84",
+      "stroke": "#4c9848",
+      "strokeWidth": 1.8,
+      "texture": "leaf-dots",
+      "sketch": {
+        "enabled": true,
+        "copies": 2,
+        "jitter": 0.75,
+        "opacity": 0.28
+      }
+    },
+    {
+      "id": "building",
+      "zIndex": 30,
+      "match": {
+        "kind": ["building", "poi-building"]
+      },
+      "geometry": ["Polygon", "MultiPolygon"],
+      "fill": "#f0bf73",
+      "stroke": "#9a6736",
+      "strokeWidth": 1.4,
+      "texture": "hatch",
+      "sketch": {
+        "enabled": true,
+        "copies": 1,
+        "jitter": 0.5,
+        "opacity": 0.35
+      }
+    },
+    {
+      "id": "path",
+      "zIndex": 40,
+      "match": {
+        "kind": ["path", "footway", "trail"]
+      },
+      "geometry": ["LineString", "MultiLineString"],
+      "casing": {
+        "stroke": "#fff9dc",
+        "strokeWidth": 6.4
+      },
+      "stroke": "#cf7d41",
+      "strokeWidth": 2.7,
+      "lineCap": "round",
+      "lineJoin": "round",
+      "sketch": {
+        "enabled": true,
+        "copies": 3,
+        "jitter": 0.6,
+        "opacity": 0.28
+      }
+    },
+    {
+      "id": "road",
+      "zIndex": 50,
+      "match": {
+        "kind": ["road", "street", "service"]
+      },
+      "geometry": ["LineString", "MultiLineString"],
+      "casing": {
+        "stroke": "#fff9dc",
+        "strokeWidth": 9
+      },
+      "stroke": "#ec9345",
+      "strokeWidth": 4.6,
+      "lineCap": "round",
+      "lineJoin": "round",
+      "sketch": {
+        "enabled": true,
+        "copies": 3,
+        "jitter": 0.75,
+        "opacity": 0.26
+      }
+    }
+  ]
+}
