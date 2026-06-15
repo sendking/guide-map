@@ -1,0 +1,453 @@
+{
+  "name": "liangzhu-attractions",
+  "generatedAt": "2026-06-15T06:28:52.294Z",
+  "coordinateSystem": "GCJ02",
+  "sourceCoordinateSystem": "WGS84",
+  "source": {
+    "file": "data/liangzhu-ancient-city.osm.geojson",
+    "spec": "data/attractions/liangzhu-attractions.spec.json",
+    "featureCollectionName": "liangzhu-ancient-city",
+    "method": "curated-spec-named-features-to-points"
+  },
+  "exportBoundary": {
+    "mode": "any",
+    "featureNames": [
+      "良渚国家考古遗址公园"
+    ],
+    "bounds": [
+      {
+        "name": "良渚古城核心遗址范围",
+        "coordinateSystem": "WGS84",
+        "southwest": [
+          119.9705,
+          30.3805
+        ],
+        "northeast": [
+          120.0035,
+          30.4075
+        ]
+      }
+    ],
+    "matchers": [
+      {
+        "type": "feature",
+        "name": "良渚国家考古遗址公园",
+        "featureId": "way/433832804"
+      },
+      {
+        "type": "bounds",
+        "name": "良渚古城核心遗址范围"
+      }
+    ]
+  },
+  "stats": {
+    "candidateNames": 17,
+    "exportedAttractions": 15,
+    "missingNames": 0,
+    "skippedOutsideBoundary": 2
+  },
+  "missingNames": [],
+  "skippedOutsideBoundary": [
+    "数字馆",
+    "凤凰山观景台"
+  ],
+  "attractions": [
+    {
+      "id": "liangzhu-attraction-01",
+      "name": "良渚古城遗址公园",
+      "type": "generic",
+      "category": "scenic-area",
+      "priority": 1,
+      "coordinate": [
+        120.028599,
+        30.377195
+      ],
+      "sourceCoordinate": [
+        120.023847,
+        30.379566
+      ],
+      "sourceFeatureIds": [
+        "way/433832804"
+      ],
+      "sourceKinds": [
+        "park"
+      ],
+      "matchedNames": [
+        "良渚国家考古遗址公园"
+      ],
+      "boundaryMatch": "良渚国家考古遗址公园",
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "liangzhu-attraction-02",
+      "name": "莫角山遗址",
+      "type": "generic",
+      "category": "heritage-site",
+      "priority": 1,
+      "coordinate": [
+        119.990005,
+        30.391812
+      ],
+      "sourceCoordinate": [
+        119.985349,
+        30.394295
+      ],
+      "sourceFeatureIds": [
+        "node/5313114185"
+      ],
+      "sourceKinds": [
+        "poi"
+      ],
+      "matchedNames": [
+        "莫角山遗址"
+      ],
+      "boundaryMatch": "良渚古城核心遗址范围",
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "liangzhu-attraction-03",
+      "name": "莫角山宫殿",
+      "type": "generic",
+      "category": "heritage-site",
+      "priority": 1,
+      "coordinate": [
+        119.990682,
+        30.392617
+      ],
+      "sourceCoordinate": [
+        119.986024,
+        30.395098
+      ],
+      "sourceFeatureIds": [
+        "relation/9760777"
+      ],
+      "sourceKinds": [
+        "poi"
+      ],
+      "matchedNames": [
+        "莫角山宫殿"
+      ],
+      "boundaryMatch": "良渚古城核心遗址范围",
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "liangzhu-attraction-04",
+      "name": "良渚博物院",
+      "type": "generic",
+      "category": "museum",
+      "priority": 1,
+      "coordinate": [
+        120.027911,
+        30.377393
+      ],
+      "sourceCoordinate": [
+        120.023161,
+        30.379766
+      ],
+      "sourceFeatureIds": [
+        "way/433830824"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "良渚博物院"
+      ],
+      "boundaryMatch": "良渚国家考古遗址公园",
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "liangzhu-attraction-05",
+      "name": "良渚古城北城墙",
+      "type": "generic",
+      "category": "city-wall",
+      "priority": 1,
+      "coordinate": [
+        119.991965,
+        30.39803
+      ],
+      "sourceCoordinate": [
+        119.987304,
+        30.400506
+      ],
+      "sourceFeatureIds": [
+        "relation/9757354",
+        "node/5844137756"
+      ],
+      "sourceKinds": [
+        "poi"
+      ],
+      "matchedNames": [
+        "良渚古城北城墙",
+        "北城墙遗址"
+      ],
+      "boundaryMatch": "良渚古城核心遗址范围",
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "liangzhu-attraction-06",
+      "name": "良渚古城南城墙",
+      "type": "generic",
+      "category": "city-wall",
+      "priority": 1,
+      "coordinate": [
+        119.993517,
+        30.384554
+      ],
+      "sourceCoordinate": [
+        119.988853,
+        30.387028
+      ],
+      "sourceFeatureIds": [
+        "relation/9757343",
+        "node/5844138156"
+      ],
+      "sourceKinds": [
+        "poi"
+      ],
+      "matchedNames": [
+        "良渚古城南城墙",
+        "南城墙遗址"
+      ],
+      "boundaryMatch": "良渚古城核心遗址范围",
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "liangzhu-attraction-07",
+      "name": "良渚古城东城墙",
+      "type": "generic",
+      "category": "city-wall",
+      "priority": 1,
+      "coordinate": [
+        119.998865,
+        30.39154
+      ],
+      "sourceCoordinate": [
+        119.994187,
+        30.393997
+      ],
+      "sourceFeatureIds": [
+        "relation/9757350"
+      ],
+      "sourceKinds": [
+        "poi"
+      ],
+      "matchedNames": [
+        "良渚古城东城墙"
+      ],
+      "boundaryMatch": "良渚古城核心遗址范围",
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "liangzhu-attraction-08",
+      "name": "良渚古城西城墙",
+      "type": "generic",
+      "category": "city-wall",
+      "priority": 1,
+      "coordinate": [
+        119.984028,
+        30.38984
+      ],
+      "sourceCoordinate": [
+        119.979387,
+        30.392341
+      ],
+      "sourceFeatureIds": [
+        "relation/9757374",
+        "node/5844138331"
+      ],
+      "sourceKinds": [
+        "poi"
+      ],
+      "matchedNames": [
+        "良渚古城西城墙",
+        "西城墙遗址"
+      ],
+      "boundaryMatch": "良渚古城核心遗址范围",
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "liangzhu-attraction-09",
+      "name": "扁担山台地外城遗址",
+      "type": "generic",
+      "category": "heritage-site",
+      "priority": 2,
+      "coordinate": [
+        119.990492,
+        30.402886
+      ],
+      "sourceCoordinate": [
+        119.985834,
+        30.405365
+      ],
+      "sourceFeatureIds": [
+        "way/618290539"
+      ],
+      "sourceKinds": [
+        "poi"
+      ],
+      "matchedNames": [
+        "扁担山台地外城遗址"
+      ],
+      "boundaryMatch": "良渚古城核心遗址范围",
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "liangzhu-attraction-10",
+      "name": "和尚地台地外城遗址",
+      "type": "generic",
+      "category": "heritage-site",
+      "priority": 2,
+      "coordinate": [
+        120.000014,
+        30.402675
+      ],
+      "sourceCoordinate": [
+        119.995332,
+        30.405126
+      ],
+      "sourceFeatureIds": [
+        "way/618290540"
+      ],
+      "sourceKinds": [
+        "poi"
+      ],
+      "matchedNames": [
+        "和尚地台地外城遗址"
+      ],
+      "boundaryMatch": "良渚古城核心遗址范围",
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "liangzhu-attraction-11",
+      "name": "里山-郑村台地外城遗址",
+      "type": "generic",
+      "category": "heritage-site",
+      "priority": 2,
+      "coordinate": [
+        120.003868,
+        30.391751
+      ],
+      "sourceCoordinate": [
+        119.999177,
+        30.394192
+      ],
+      "sourceFeatureIds": [
+        "way/618290541"
+      ],
+      "sourceKinds": [
+        "poi"
+      ],
+      "matchedNames": [
+        "里山-郑村台地外城遗址"
+      ],
+      "boundaryMatch": "良渚古城核心遗址范围",
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "liangzhu-attraction-12",
+      "name": "卞家山台地外城遗址",
+      "type": "generic",
+      "category": "heritage-site",
+      "priority": 2,
+      "coordinate": [
+        119.995868,
+        30.380305
+      ],
+      "sourceCoordinate": [
+        119.991199,
+        30.382773
+      ],
+      "sourceFeatureIds": [
+        "way/618290542"
+      ],
+      "sourceKinds": [
+        "poi"
+      ],
+      "matchedNames": [
+        "卞家山台地外城遗址"
+      ],
+      "boundaryMatch": "良渚古城核心遗址范围",
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "liangzhu-attraction-13",
+      "name": "凤山台地群外城遗址",
+      "type": "generic",
+      "category": "heritage-site",
+      "priority": 2,
+      "coordinate": [
+        119.978889,
+        30.38235
+      ],
+      "sourceCoordinate": [
+        119.974261,
+        30.384867
+      ],
+      "sourceFeatureIds": [
+        "way/618290543",
+        "way/618290544"
+      ],
+      "sourceKinds": [
+        "poi"
+      ],
+      "matchedNames": [
+        "凤山台地群外城遗址"
+      ],
+      "boundaryMatch": "良渚古城核心遗址范围",
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "liangzhu-attraction-14",
+      "name": "文家山墓地",
+      "type": "generic",
+      "category": "tomb",
+      "priority": 2,
+      "coordinate": [
+        119.976902,
+        30.385305
+      ],
+      "sourceCoordinate": [
+        119.972278,
+        30.387826
+      ],
+      "sourceFeatureIds": [
+        "node/5842022977"
+      ],
+      "sourceKinds": [
+        "poi"
+      ],
+      "matchedNames": [
+        "文家山墓地"
+      ],
+      "boundaryMatch": "良渚古城核心遗址范围",
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "liangzhu-attraction-15",
+      "name": "卞家山墓地",
+      "type": "generic",
+      "category": "tomb",
+      "priority": 2,
+      "coordinate": [
+        119.995765,
+        30.3796
+      ],
+      "sourceCoordinate": [
+        119.991096,
+        30.382068
+      ],
+      "sourceFeatureIds": [
+        "node/5844191128"
+      ],
+      "sourceKinds": [
+        "poi"
+      ],
+      "matchedNames": [
+        "卞家山墓地"
+      ],
+      "boundaryMatch": "良渚古城核心遗址范围",
+      "pointMethod": "bbox-center"
+    }
+  ]
+}

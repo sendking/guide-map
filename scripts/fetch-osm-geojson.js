@@ -238,10 +238,12 @@ function buildOverpassQuery(bounds, timeoutSeconds, filters) {
     selectors.push(`way["building"](${bbox});`);
   }
   if (filters.includePoi !== false) {
-    selectors.push(`node["tourism"](${bbox});`);
-    selectors.push(`node["amenity"](${bbox});`);
-    selectors.push(`node["leisure"](${bbox});`);
-    selectors.push(`node["historic"](${bbox});`);
+    for (const elementType of ["node", "way", "relation"]) {
+      selectors.push(`${elementType}["tourism"](${bbox});`);
+      selectors.push(`${elementType}["amenity"](${bbox});`);
+      selectors.push(`${elementType}["leisure"](${bbox});`);
+      selectors.push(`${elementType}["historic"](${bbox});`);
+    }
   }
 
   return `[out:json][timeout:${timeoutSeconds}];
@@ -306,7 +308,7 @@ function wayToFeature(way, nodes) {
   if (!kind) return null;
 
   const isClosed = coords.length > 3 && sameCoordinate(coords[0], coords[coords.length - 1]);
-  const polygonKind = ["water", "park", "building"].includes(kind);
+  const polygonKind = ["water", "park", "building", "poi"].includes(kind);
   const geometry =
     polygonKind && isClosed
       ? { type: "Polygon", coordinates: [coords] }
@@ -323,7 +325,7 @@ function wayToFeature(way, nodes) {
 function relationToFeature(relation, ways, nodes) {
   if (!relation.tags || relation.tags.type !== "multipolygon") return null;
   const kind = classifyTags(relation.tags);
-  if (!["water", "park", "building"].includes(kind)) return null;
+  if (!["water", "park", "building", "poi"].includes(kind)) return null;
 
   const outerRings = [];
   const innerRings = [];

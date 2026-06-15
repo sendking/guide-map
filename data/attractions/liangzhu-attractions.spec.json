@@ -1,0 +1,41 @@
+{
+  "name": "liangzhu-attractions",
+  "idPrefix": "liangzhu-attraction",
+  "defaultType": "generic",
+  "notes": "Initial seed list. Refine names, aliases, and exportBoundary against official scenic-area data before production export.",
+  "exportBoundary": {
+    "featureNames": ["良渚国家考古遗址公园"],
+    "bounds": [
+      {
+        "name": "良渚古城核心遗址范围",
+        "coordinateSystem": "WGS84",
+        "southwest": [119.9705, 30.3805],
+        "northeast": [120.0035, 30.4075]
+      }
+    ]
+  },
+  "attractions": [
+    {
+      "name": "良渚古城遗址公园",
+      "aliases": ["良渚古城遗址", "良渚遗址", "良渚国家考古遗址公园"],
+      "category": "scenic-area",
+      "priority": 1
+    },
+    { "name": "莫角山遗址", "aliases": ["莫角山"], "category": "heritage-site", "priority": 1 },
+    { "name": "莫角山宫殿", "category": "heritage-site", "priority": 1 },
+    { "name": "良渚博物院", "aliases": ["良渚博物馆"], "category": "museum", "priority": 1 },
+    { "name": "良渚古城北城墙", "aliases": ["北城墙遗址"], "category": "city-wall", "priority": 1 },
+    { "name": "良渚古城南城墙", "aliases": ["南城墙遗址"], "category": "city-wall", "priority": 1 },
+    { "name": "良渚古城东城墙", "category": "city-wall", "priority": 1 },
+    { "name": "良渚古城西城墙", "aliases": ["西城墙遗址"], "category": "city-wall", "priority": 1 },
+    { "name": "扁担山台地外城遗址", "category": "heritage-site", "priority": 2 },
+    { "name": "和尚地台地外城遗址", "category": "heritage-site", "priority": 2 },
+    { "name": "里山-郑村台地外城遗址", "category": "heritage-site", "priority": 2 },
+    { "name": "卞家山台地外城遗址", "category": "heritage-site", "priority": 2 },
+    { "name": "凤山台地群外城遗址", "category": "heritage-site", "priority": 2 },
+    { "name": "文家山墓地", "category": "tomb", "priority": 2 },
+    { "name": "卞家山墓地", "category": "tomb", "priority": 2 },
+    { "name": "数字馆", "category": "museum", "priority": 2 },
+    { "name": "凤凰山观景台", "category": "viewpoint", "priority": 2 }
+  ]
+}

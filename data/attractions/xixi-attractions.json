@@ -1,5 +1,862 @@
 {
   "name": "xixi-attractions",
+  "generatedAt": "2026-06-15T06:28:52.334Z",
   "coordinateSystem": "GCJ02",
-  "attractions": []
+  "sourceCoordinateSystem": "WGS84",
+  "source": {
+    "file": "data/xixi-wetland.osm.geojson",
+    "spec": "data/attractions/xixi-attractions.spec.json",
+    "featureCollectionName": "xixi-wetland",
+    "method": "curated-spec-named-features-to-points"
+  },
+  "exportBoundary": null,
+  "stats": {
+    "candidateNames": 32,
+    "exportedAttractions": 32,
+    "missingNames": 0,
+    "skippedOutsideBoundary": 0
+  },
+  "missingNames": [],
+  "skippedOutsideBoundary": [],
+  "attractions": [
+    {
+      "id": "xixi-attraction-01",
+      "name": "西溪国家湿地公园",
+      "type": "generic",
+      "category": "scenic-area",
+      "priority": 1,
+      "coordinate": [
+        120.06743,
+        30.263999
+      ],
+      "sourceCoordinate": [
+        120.062621,
+        30.266298
+      ],
+      "sourceFeatureIds": [
+        "way/783223294"
+      ],
+      "sourceKinds": [
+        "park"
+      ],
+      "matchedNames": [
+        "西溪国家湿地公园"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-02",
+      "name": "西溪湿地核心保护区",
+      "type": "generic",
+      "category": "scenic-area",
+      "priority": 1,
+      "coordinate": [
+        120.064806,
+        30.266286
+      ],
+      "sourceCoordinate": [
+        120.059999,
+        30.268589
+      ],
+      "sourceFeatureIds": [
+        "relation/2676824"
+      ],
+      "sourceKinds": [
+        "park"
+      ],
+      "matchedNames": [
+        "西溪湿地核心保护区"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-03",
+      "name": "西溪农耕文化村",
+      "type": "generic",
+      "category": "scenic-area",
+      "priority": 1,
+      "coordinate": [
+        120.0488,
+        30.272664
+      ],
+      "sourceCoordinate": [
+        120.044015,
+        30.274999
+      ],
+      "sourceFeatureIds": [
+        "way/1124743167"
+      ],
+      "sourceKinds": [
+        "park"
+      ],
+      "matchedNames": [
+        "西溪农耕文化村"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-04",
+      "name": "西溪五常民俗文化体验村",
+      "type": "generic",
+      "category": "scenic-area",
+      "priority": 1,
+      "coordinate": [
+        120.049671,
+        30.264248
+      ],
+      "sourceCoordinate": [
+        120.044886,
+        30.266581
+      ],
+      "sourceFeatureIds": [
+        "way/1124743168"
+      ],
+      "sourceKinds": [
+        "park"
+      ],
+      "matchedNames": [
+        "西溪五常民俗文化体验村"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-05",
+      "name": "西溪艺术集合村",
+      "type": "generic",
+      "category": "scenic-area",
+      "priority": 1,
+      "coordinate": [
+        120.049595,
+        30.255555
+      ],
+      "sourceCoordinate": [
+        120.04481,
+        30.257889
+      ],
+      "sourceFeatureIds": [
+        "way/1124743169"
+      ],
+      "sourceKinds": [
+        "park"
+      ],
+      "matchedNames": [
+        "西溪艺术集合村"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-06",
+      "name": "洪园",
+      "type": "generic",
+      "category": "scenic-area",
+      "priority": 1,
+      "coordinate": [
+        120.050384,
+        30.248354
+      ],
+      "sourceCoordinate": [
+        120.045598,
+        30.250687
+      ],
+      "sourceFeatureIds": [
+        "way/970028298"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "洪园"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-07",
+      "name": "河渚街",
+      "type": "generic",
+      "category": "street",
+      "priority": 1,
+      "coordinate": [
+        120.071337,
+        30.272708
+      ],
+      "sourceCoordinate": [
+        120.066524,
+        30.275
+      ],
+      "sourceFeatureIds": [
+        "way/445674496",
+        "way/445674497",
+        "way/445674498",
+        "way/445674499",
+        "way/445674500",
+        "way/782699964"
+      ],
+      "sourceKinds": [
+        "road"
+      ],
+      "matchedNames": [
+        "河渚街"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-08",
+      "name": "中国湿地博物馆",
+      "type": "generic",
+      "category": "museum",
+      "priority": 1,
+      "coordinate": [
+        120.087585,
+        30.264251
+      ],
+      "sourceCoordinate": [
+        120.082768,
+        30.266527
+      ],
+      "sourceFeatureIds": [
+        "way/445674471"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "中国湿地博物馆"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-09",
+      "name": "西溪湿地周家村售票处",
+      "type": "generic",
+      "category": "ticket",
+      "priority": 1,
+      "coordinate": [
+        120.061255,
+        30.255016
+      ],
+      "sourceCoordinate": [
+        120.056453,
+        30.257326
+      ],
+      "sourceFeatureIds": [
+        "way/463217862"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "西溪湿地周家村售票处"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-10",
+      "name": "樟树码头售票处",
+      "type": "generic",
+      "category": "ticket",
+      "priority": 1,
+      "coordinate": [
+        120.054318,
+        30.254881
+      ],
+      "sourceCoordinate": [
+        120.049526,
+        30.257205
+      ],
+      "sourceFeatureIds": [
+        "way/904453962"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "樟树码头售票处"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-11",
+      "name": "西溪湿地游客驿站服务中心",
+      "type": "generic",
+      "category": "visitor-service",
+      "priority": 1,
+      "coordinate": [
+        120.090112,
+        30.265217
+      ],
+      "sourceCoordinate": [
+        120.085295,
+        30.267492
+      ],
+      "sourceFeatureIds": [
+        "way/783321243"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "西溪湿地游客驿站服务中心"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-12",
+      "name": "西溪湿地大草坪",
+      "type": "generic",
+      "category": "scenic-area",
+      "priority": 2,
+      "coordinate": [
+        120.082775,
+        30.273698
+      ],
+      "sourceCoordinate": [
+        120.077956,
+        30.275977
+      ],
+      "sourceFeatureIds": [
+        "relation/9051318"
+      ],
+      "sourceKinds": [
+        "park"
+      ],
+      "matchedNames": [
+        "西溪湿地大草坪"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-13",
+      "name": "西溪大众休憩村",
+      "type": "generic",
+      "category": "scenic-area",
+      "priority": 2,
+      "coordinate": [
+        120.051208,
+        30.254016
+      ],
+      "sourceCoordinate": [
+        120.046421,
+        30.256346
+      ],
+      "sourceFeatureIds": [
+        "way/1124743170"
+      ],
+      "sourceKinds": [
+        "park"
+      ],
+      "matchedNames": [
+        "西溪大众休憩村"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-14",
+      "name": "上河渚街",
+      "type": "generic",
+      "category": "street",
+      "priority": 2,
+      "coordinate": [
+        120.069083,
+        30.272598
+      ],
+      "sourceCoordinate": [
+        120.064272,
+        30.274894
+      ],
+      "sourceFeatureIds": [
+        "way/445674489",
+        "way/838474100",
+        "way/838474101"
+      ],
+      "sourceKinds": [
+        "road"
+      ],
+      "matchedNames": [
+        "上河渚街"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-15",
+      "name": "绿草地艺术馆",
+      "type": "generic",
+      "category": "gallery",
+      "priority": 2,
+      "coordinate": [
+        120.071763,
+        30.275859
+      ],
+      "sourceCoordinate": [
+        120.06695,
+        30.27815
+      ],
+      "sourceFeatureIds": [
+        "way/445674501"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "绿草地艺术馆"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-16",
+      "name": "西溪蔡志忠美术馆",
+      "type": "generic",
+      "category": "gallery",
+      "priority": 2,
+      "coordinate": [
+        120.077089,
+        30.262834
+      ],
+      "sourceCoordinate": [
+        120.072273,
+        30.26512
+      ],
+      "sourceFeatureIds": [
+        "way/932057585"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "西溪蔡志忠美术馆"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-17",
+      "name": "西溪伞铺",
+      "type": "generic",
+      "category": "shop",
+      "priority": 2,
+      "coordinate": [
+        120.072166,
+        30.272812
+      ],
+      "sourceCoordinate": [
+        120.067352,
+        30.275103
+      ],
+      "sourceFeatureIds": [
+        "way/445674504"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "西溪伞铺"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-18",
+      "name": "西溪天堂观光车停靠点",
+      "type": "generic",
+      "category": "shuttle-stop",
+      "priority": 2,
+      "coordinate": [
+        120.090208,
+        30.265037
+      ],
+      "sourceCoordinate": [
+        120.085391,
+        30.267311
+      ],
+      "sourceFeatureIds": [
+        "way/783321244"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "西溪天堂观光车停靠点"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-19",
+      "name": "高庄观光车停靠点",
+      "type": "generic",
+      "category": "shuttle-stop",
+      "priority": 2,
+      "coordinate": [
+        120.076623,
+        30.262151
+      ],
+      "sourceCoordinate": [
+        120.071808,
+        30.264438
+      ],
+      "sourceFeatureIds": [
+        "way/932057599"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "高庄观光车停靠点"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-20",
+      "name": "花朝野航",
+      "type": "generic",
+      "category": "scenic-building",
+      "priority": 2,
+      "coordinate": [
+        120.089038,
+        30.273113
+      ],
+      "sourceCoordinate": [
+        120.08422,
+        30.275387
+      ],
+      "sourceFeatureIds": [
+        "way/783304999"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "花朝野航"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-21",
+      "name": "树灵飞虹",
+      "type": "generic",
+      "category": "scenic-building",
+      "priority": 2,
+      "coordinate": [
+        120.089393,
+        30.271882
+      ],
+      "sourceCoordinate": [
+        120.084575,
+        30.274156
+      ],
+      "sourceFeatureIds": [
+        "way/783305000"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "树灵飞虹"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-22",
+      "name": "烟溪觅月",
+      "type": "generic",
+      "category": "scenic-building",
+      "priority": 2,
+      "coordinate": [
+        120.089781,
+        30.27141
+      ],
+      "sourceCoordinate": [
+        120.084963,
+        30.273684
+      ],
+      "sourceFeatureIds": [
+        "way/783305005"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "烟溪觅月"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-23",
+      "name": "溪照晚霞",
+      "type": "generic",
+      "category": "scenic-building",
+      "priority": 2,
+      "coordinate": [
+        120.090101,
+        30.270778
+      ],
+      "sourceCoordinate": [
+        120.085284,
+        30.273052
+      ],
+      "sourceFeatureIds": [
+        "way/783305006"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "溪照晚霞"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-24",
+      "name": "探梅厅",
+      "type": "generic",
+      "category": "scenic-building",
+      "priority": 2,
+      "coordinate": [
+        120.059674,
+        30.264695
+      ],
+      "sourceCoordinate": [
+        120.054874,
+        30.267007
+      ],
+      "sourceFeatureIds": [
+        "way/922850962"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "探梅厅"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-25",
+      "name": "蒋相公祠堂",
+      "type": "generic",
+      "category": "historic-building",
+      "priority": 2,
+      "coordinate": [
+        120.070597,
+        30.272359
+      ],
+      "sourceCoordinate": [
+        120.065785,
+        30.274652
+      ],
+      "sourceFeatureIds": [
+        "way/932011302"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "蒋相公祠堂"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-26",
+      "name": "龙舟盛会（龙舟陈列室）",
+      "type": "generic",
+      "category": "exhibition",
+      "priority": 2,
+      "coordinate": [
+        120.067974,
+        30.272364
+      ],
+      "sourceCoordinate": [
+        120.063163,
+        30.274662
+      ],
+      "sourceFeatureIds": [
+        "way/932038559"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "龙舟盛会（龙舟陈列室）"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-27",
+      "name": "曲水庵",
+      "type": "generic",
+      "category": "scenic-building",
+      "priority": 2,
+      "coordinate": [
+        120.072133,
+        30.264436
+      ],
+      "sourceCoordinate": [
+        120.06732,
+        30.266728
+      ],
+      "sourceFeatureIds": [
+        "way/932057560"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "曲水庵"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-28",
+      "name": "心等院",
+      "type": "generic",
+      "category": "scenic-building",
+      "priority": 2,
+      "coordinate": [
+        120.071094,
+        30.264309
+      ],
+      "sourceCoordinate": [
+        120.066282,
+        30.266603
+      ],
+      "sourceFeatureIds": [
+        "way/932057566"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "心等院"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-29",
+      "name": "桐荫堂",
+      "type": "generic",
+      "category": "scenic-building",
+      "priority": 2,
+      "coordinate": [
+        120.077618,
+        30.264411
+      ],
+      "sourceCoordinate": [
+        120.072802,
+        30.266696
+      ],
+      "sourceFeatureIds": [
+        "way/932057629"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "桐荫堂"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-30",
+      "name": "桧楫亭",
+      "type": "generic",
+      "category": "scenic-building",
+      "priority": 2,
+      "coordinate": [
+        120.077206,
+        30.264336
+      ],
+      "sourceCoordinate": [
+        120.07239,
+        30.266622
+      ],
+      "sourceFeatureIds": [
+        "way/932057630"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "桧楫亭"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-31",
+      "name": "墨庄斋",
+      "type": "generic",
+      "category": "scenic-building",
+      "priority": 2,
+      "coordinate": [
+        120.076633,
+        30.26413
+      ],
+      "sourceCoordinate": [
+        120.071818,
+        30.266416
+      ],
+      "sourceFeatureIds": [
+        "way/932057631"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "墨庄斋"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    },
+    {
+      "id": "xixi-attraction-32",
+      "name": "瑶华居",
+      "type": "generic",
+      "category": "scenic-building",
+      "priority": 2,
+      "coordinate": [
+        120.076717,
+        30.263921
+      ],
+      "sourceCoordinate": [
+        120.071902,
+        30.266207
+      ],
+      "sourceFeatureIds": [
+        "way/932057634"
+      ],
+      "sourceKinds": [
+        "building"
+      ],
+      "matchedNames": [
+        "瑶华居"
+      ],
+      "boundaryMatch": null,
+      "pointMethod": "bbox-center"
+    }
+  ]
 }
