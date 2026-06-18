@@ -27,7 +27,20 @@
   "render": {
     "seed": "xixi-wetland-v1",
     "geometryMode": "exact-with-sketch",
-    "showDebugFrame": false
+    "showDebugFrame": false,
+    "clipBoundary": {
+      "enabled": true,
+      "match": {
+        "osmId": "way/783223294",
+        "name": "西溪国家湿地公园"
+      },
+      "outsideFill": "none",
+      "boundaryStroke": {
+        "stroke": "#6f9b61",
+        "strokeWidth": 2,
+        "opacity": 0.82
+      }
+    }
   },
   "osm": {
     "source": "overpass",

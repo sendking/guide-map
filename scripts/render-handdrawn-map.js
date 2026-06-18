@@ -49,6 +49,13 @@ function main() {
   );
   const elementsByLayer = new Map(sortedLayers.map((layer) => [layer.id, []]));
   const fallbackElements = [];
+  const clipBoundary = createClipBoundary({
+    config,
+    geojson,
+    viewport,
+    projection,
+    dataCoordinateSystem
+  });
 
   for (const feature of geojson.features || []) {
     if (!feature?.geometry) {
@@ -85,6 +92,7 @@ function main() {
     height: viewport.height,
     style,
     config,
+    clipBoundary,
     layerElements: [
       ...fallbackElements,
       ...sortedLayers.flatMap((layer) => elementsByLayer.get(layer.id) || [])
@@ -391,6 +399,78 @@ function findLayer(layers, feature) {
   return layers.find((layer) => layerMatchesFeature(layer, feature));
 }
 
+function createClipBoundary({ config, geojson, viewport, projection, dataCoordinateSystem }) {
+  const clipConfig = config.render?.clipBoundary;
+  if (!clipConfig?.enabled) return null;
+
+  const boundaryFeature = findBoundaryFeature(geojson.features || [], clipConfig);
+  if (!boundaryFeature) {
+    throw new Error(`clipBoundary feature not found for ${JSON.stringify(clipConfig.match || {})}`);
+  }
+
+  const toScreen = (lngLat) => {
+    const converted = convertCoordinate(
+      normalizeLngLat(lngLat, "clip boundary coordinate"),
+      dataCoordinateSystem,
+      viewport.coordinateSystem
+    );
+    return projection.project(converted);
+  };
+  const pathData = geometryToPolygonPath(boundaryFeature.geometry, toScreen);
+  if (!pathData) {
+    throw new Error("clipBoundary feature must be a Polygon or MultiPolygon");
+  }
+
+  return {
+    id: escapeId(clipConfig.id || "scenic-boundary"),
+    pathData,
+    feature: {
+      name: boundaryFeature.properties?.name,
+      osmId: boundaryFeature.properties?.osmId
+    },
+    outsideFill: clipConfig.outsideFill ?? "none",
+    boundaryStroke: clipConfig.boundaryStroke || null
+  };
+}
+
+function findBoundaryFeature(features, clipConfig) {
+  const match = clipConfig.match || {};
+  const candidates = features.filter((feature) => {
+    if (!["Polygon", "MultiPolygon"].includes(feature.geometry?.type)) return false;
+    return Object.entries(match).every(([property, accepted]) => {
+      const values = Array.isArray(accepted) ? accepted : [accepted];
+      const value =
+        property.startsWith("osmTags.")
+          ? feature.properties?.osmTags?.[property.slice("osmTags.".length)]
+          : feature.properties?.[property];
+      return values.includes(value);
+    });
+  });
+
+  if (candidates.length > 0) return candidates[0];
+
+  if (clipConfig.name) {
+    return features.find(
+      (feature) =>
+        ["Polygon", "MultiPolygon"].includes(feature.geometry?.type) &&
+        feature.properties?.name === clipConfig.name
+    );
+  }
+  return null;
+}
+
+function geometryToPolygonPath(geometry, toScreen) {
+  if (geometry.type === "Polygon") {
+    return polygonPath(geometry.coordinates.map((ring) => ring.map(toScreen)));
+  }
+  if (geometry.type === "MultiPolygon") {
+    return geometry.coordinates
+      .map((polygon) => polygonPath(polygon.map((ring) => ring.map(toScreen))))
+      .join("");
+  }
+  return "";
+}
+
 function layerMatchesFeature(layer, feature) {
   const geometryTypes = layer.geometry || [];
   if (geometryTypes.length > 0 && !geometryTypes.includes(feature.geometry.type)) {
@@ -654,12 +734,32 @@ function fmt(value) {
   return Number(value.toFixed(2));
 }
 
-function buildSvg({ width, height, style, config, layerElements }) {
+function buildSvg({ width, height, style, config, clipBoundary, layerElements }) {
   const debugFrame = config.render?.showDebugFrame
     ? `<rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" fill="none" stroke="#f00" stroke-width="1"/>`
     : "";
   const paper = style.paper?.enabled
     ? `<rect width="100%" height="100%" filter="url(#paper-grain)" opacity="${style.paper.opacity ?? 0.15}"/>`
+    : "";
+  const clipDefs = clipBoundary
+    ? `
+    <clipPath id="${clipBoundary.id}">
+      <path d="${escapeXml(clipBoundary.pathData)}"/>
+    </clipPath>`
+    : "";
+  const clipAttr = clipBoundary ? ` clip-path="url(#${clipBoundary.id})"` : "";
+  const outsideFill =
+    clipBoundary && clipBoundary.outsideFill !== "none"
+      ? `<rect width="100%" height="100%" fill="${escapeXml(clipBoundary.outsideFill)}"/>`
+      : "";
+  const boundaryStroke = clipBoundary?.boundaryStroke
+    ? svgPath(clipBoundary.pathData, {
+        fill: "none",
+        stroke: clipBoundary.boundaryStroke.stroke || "#7fa56d",
+        "stroke-width": clipBoundary.boundaryStroke.strokeWidth ?? 2,
+        "stroke-linejoin": "round",
+        opacity: clipBoundary.boundaryStroke.opacity ?? 0.85
+      })
     : "";
 
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -683,12 +783,17 @@ function buildSvg({ width, height, style, config, layerElements }) {
     <pattern id="texture-hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
       <line x1="0" y1="0" x2="0" y2="12" stroke="#b58c63" stroke-width="1"/>
     </pattern>
+    ${clipDefs}
   </defs>
-  <rect width="100%" height="100%" fill="${escapeXml(style.background || "#f7efd8")}"/>
-  ${paper}
-  <g id="map-content">
-    ${layerElements.join("\n    ")}
+  ${outsideFill}
+  <g id="scenic-area"${clipAttr}>
+    <rect width="100%" height="100%" fill="${escapeXml(style.background || "#f7efd8")}"/>
+    ${paper}
+    <g id="map-content">
+      ${layerElements.join("\n      ")}
+    </g>
   </g>
+  ${boundaryStroke}
   ${debugFrame}
 </svg>
 `;
